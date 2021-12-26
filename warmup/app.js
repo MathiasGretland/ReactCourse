@@ -94,4 +94,13 @@ const users2 = [
 
 console.log(users2)
 
+const modifiedUser = users2.map((user) => user.age)
+const filterUser = users2.filter((user) => user.age === 30)
+
+console.log(modifiedUser)
+console.log(filterUser)
+
+
+
+
 //5
