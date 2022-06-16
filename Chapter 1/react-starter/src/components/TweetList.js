@@ -2,12 +2,10 @@ import React from "react";
 import Tweet from "./Tweet";
 
 
-const TweetList = ({navn, message}) => {
-    return(
+const TweetList = ({ navn, tweets, setTweets }) => {
+    return (
         <div>
-            <Tweet navn={navn} message={message}/>
-            <Tweet navn={navn} message={message}/>
-            <Tweet navn={navn} message={message}/>
+            {tweets.map(tweet => <Tweet setTweets={setTweets} navn={navn} tweet={tweet} tweets={tweets} />)}
         </div>
     )
 }
