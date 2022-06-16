@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //Import components
 import Tweet from "./components/Tweet";
 import CreateTweet from "./components/CreateTweet";
@@ -23,6 +23,10 @@ function App() {
   //State
   const [textInput, setTextInput] = useState("")
   const [tweets, setTweets] = useState([])
+
+  useEffect(() => {
+    console.log("WE R`SWAG")
+  }, [tweets])
   return (
     <div>
       <CreateTweet textInput={textInput} setTextInput={setTextInput} tweets={tweets} setTweets={setTweets} />
